@@ -11,4 +11,4 @@ def random_drop():
         for _ in range(0, random.randint(0, 5)):
             my_str_list.append("right")
     my_str_list.append("space")
-    pyautogui.typewrite(my_str_list, interval=0.01)
+    pyautogui.typewrite(my_str_list, interval=0.05)
