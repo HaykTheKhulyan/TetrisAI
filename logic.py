@@ -56,9 +56,11 @@ def define_empty_top_layer(game_grid):
         solid_found = False
         while not solid_found :
             if row == 19:
-                game_grid[row][col] = 2
-                solid_found = True
-            if row == 19 or game_grid[row][col] == 1:
-                game_grid[row - 1][col] = 2
-                solid_found = True
+                for i in range(0, 20):
+                    game_grid[row - i][col] = 2
+                    solid_found = True
+            elif game_grid[row][col] == 1:
+                for i in range(1, row + 1):
+                    game_grid[row - i][col] = 2
+                    solid_found = True
             row += 1
